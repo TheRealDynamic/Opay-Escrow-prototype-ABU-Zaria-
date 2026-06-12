@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escrow MVP</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="page active">
+    <div class="card">
+      <h2>Escrow System</h2>
+      <p>Secure Buyer & Seller Transactions</p>
+
+      <input type="text" id="username" placeholder="Enter username"/>
+      <input type="password" id="password" placeholder="Enter password"/>
+
+      <button onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="page">
+    <header>
+      <h2>Dashboard</h2>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container">
+
+      <div class="card">
+        <h3>Create Escrow</h3>
+        <input type="text" id="buyer" placeholder="Buyer Name"/>
+        <input type="text" id="seller" placeholder="Seller Name"/>
+        <input type="number" id="amount" placeholder="Amount (₦)"/>
+        <button onclick="createEscrow()">Create Transaction</button>
+      </div>
+
+      <div class="card">
+        <h3>Transactions</h3>
+        <ul id="transactions"></ul>
+      </div>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+          </html>
